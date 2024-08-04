@@ -30,14 +30,23 @@ export const CartProvider = ({ children }) => {
 
   const removeFromCart = (dessertName) => {
     setCart((prevCart) => prevCart.filter((order) => order.name !== dessertName));
-  }
+  };
 
   const getOrderQuantity = (dessertName) => {
-    const order = cart.find((order) => order.name === name);
+    const order = cart.find((order) => order.name === dessertName);
     return order ? order.quantity : 0;
   };
+
+  const contextValue = {
+    cart,
+    addDessertToCart,
+    updateDessertInCart,
+    removeFromCart,
+    getOrderQuantity
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addDessertToCart, updateDessertInCart, removeFromCart, getOrderQuantity }}>
+    <CartContext.Provider value={contextValue}>
       {children}
     </CartContext.Provider>
   );

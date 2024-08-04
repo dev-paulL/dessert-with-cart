@@ -15,8 +15,8 @@ export default function DessertsCategory() {
     <section className="section_desserts">
       <h1>Desserts</h1>
 
-      {desserts.map((d) => (
-        <DessertCard key={d.name} dessert={d} />
+      {desserts.map((dessert) => (
+        <DessertCard key={dessert.name} dessert={dessert} />
       ))}
     </section>
   );
