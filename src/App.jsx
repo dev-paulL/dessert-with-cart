@@ -9,7 +9,7 @@ function App() {
     <main>
       <CartProvider>
         <DessertsCategory />
-        <Cart/>
+        <Cart />
       </CartProvider>
     </main>
   );
