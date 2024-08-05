@@ -25,14 +25,20 @@ export default function DessertCard({ dessert }) {
 
   return (
     <article className="section_desserts-article">
-      <img
-        alt={dessert.name}
-        src={dessert.image.mobile}
-        className={`section_desserts-article--img ${quantityInCart > 0 ? "section_desserts-order--img" : ""}`}
-      />
+      <picture>
+        <source srcSet={dessert.image.desktop} media="(min-width: 64rem)" />
+        <source srcSet={dessert.image.tablet} media="(min-width: 48rem)" />
+        <img
+          alt={dessert.name}
+          src={dessert.image.mobile}
+          className={`section_desserts-article--img ${
+            quantityInCart > 0 ? "section_desserts-order--img" : ""
+          }`}
+        />
+      </picture>
 
       {quantityInCart === 0 ? (
-        <button className="section_desserts-article--btn btn-addToCart" onClick={handleAdd}>
+        <button className="section_desserts-article--btn-addToCart" onClick={handleAdd}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="21"
@@ -55,18 +61,39 @@ export default function DessertCard({ dessert }) {
       ) : (
         <div className="section_desserts-article--quantityBtns">
           <button className="section_desserts-article--decrementBtn" onClick={handleDecrement}>
-            <img src="images/icon-decrement-quantity.svg" alt="" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="10"
+              height="2"
+              fill="none"
+              viewBox="0 0 10 2"
+            >
+              <path fill="#fff" d="M0 .375h10v1.25H0V.375Z" />
+            </svg>
           </button>
           <p>{quantityInCart}</p>
           <button className="section_desserts-article--incrementBtn" onClick={handleIncrement}>
-          <img src="images/icon-increment-quantity.svg" alt="" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="10"
+              height="10"
+              fill="none"
+              viewBox="0 0 10 10"
+            >
+              <path
+                fill="#fff"
+                d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z"
+              />
+            </svg>
           </button>
         </div>
       )}
 
       <p className="section_desserts-article--category">{dessert.category}</p>
       <h2 className="section_desserts-article--name">{dessert.name}</h2>
-      <p className="section_desserts-article--price">${dessert.price.toFixed(2).toLocaleString()}</p>
+      <p className="section_desserts-article--price">
+        ${dessert.price.toFixed(2).toLocaleString()}
+      </p>
     </article>
   );
 }
