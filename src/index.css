@@ -56,7 +56,7 @@ img {
 .section_desserts-article {
   display: flex;
   flex-flow: column;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 .section_desserts-article--img {
   border-radius: var(--cardRadius);
@@ -88,7 +88,7 @@ img {
 
 .section_desserts-article--category {
   color: var(--rose500);
-  font-weight: 500;
+  
 }
 
 .section_desserts-article--name {
@@ -112,6 +112,7 @@ img {
 .section_cart h2 {
   color: var(--Red);
   font-weight: bold;
+  padding-bottom: 1rem;
 }
 
 .section_cart-item {
@@ -148,10 +149,36 @@ img {
   transform: translateY(-50%);
   border: 2px solid var(--rose300);
   background: none;
-  border-radius: 10px;
-  padding: 3px;
+  border-radius: 100%;
+  padding: 2px;
+  height: 1.2rem;
 }
 
 .section_cart-total {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section_cart-total--price {
+  font-size: 1.75rem;
+  color: var(--rose900);
+}
+
+.section_cart-empty--illustration {
+  margin: 1rem auto;
+  display: block;
+}
+
+.section_cart-empty--text {
+  text-align: center;
+  font-weight: 600;
+  color: var(--rose500);
+}
+
+hr {
+  margin-top: 1rem;
+  border-top: 1px solid var(--rose300);
+  opacity: .3;
 }
