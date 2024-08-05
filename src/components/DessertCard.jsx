@@ -28,7 +28,7 @@ export default function DessertCard({ dessert }) {
       <img
         alt={dessert.name}
         src={dessert.image.mobile}
-        className={`section_desserts-article--img ${quantityInCart > 0 && "section_desserts-order--img"}`}
+        className={`section_desserts-article--img ${quantityInCart > 0 ? "section_desserts-order--img" : ""}`}
       />
 
       {quantityInCart === 0 ? (

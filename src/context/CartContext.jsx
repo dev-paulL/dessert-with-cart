@@ -42,14 +42,10 @@ export const CartProvider = ({ children }) => {
     addDessertToCart,
     updateDessertInCart,
     removeFromCart,
-    getOrderQuantity
+    getOrderQuantity,
   };
 
-  return (
-    <CartContext.Provider value={contextValue}>
-      {children}
-    </CartContext.Provider>
-  );
+  return <CartContext.Provider value={contextValue}>{children}</CartContext.Provider>;
 };
 
 export default CartContext;

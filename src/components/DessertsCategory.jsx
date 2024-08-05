@@ -12,12 +12,15 @@ export default function DessertsCategory() {
   }, []);
 
   return (
-    <section className="section_desserts">
-      <h1>Desserts</h1>
-
-      {desserts.map((dessert) => (
-        <DessertCard key={dessert.name} dessert={dessert} />
-      ))}
-    </section>
+    <>
+      <section className="section_desserts">
+        <h1>Desserts</h1>
+        <div className="section_desserts--allDesserts">
+          {desserts.map((dessert) => (
+            <DessertCard key={dessert.name} dessert={dessert} />
+          ))}
+        </div>
+      </section>
+    </>
   );
 }

@@ -44,13 +44,16 @@ img {
 }
 
 .section_desserts {
-  display: flex;
-  flex-flow: column;
+  padding: 1rem 0;
+}
+.section_desserts--allDesserts {
+  display: grid;
   gap: 1rem;
 }
 .section_desserts h1 {
   font-size: 2rem;
   font-weight: 700;
+  padding-bottom: 1rem;
 }
 
 .section_desserts-article {
@@ -60,10 +63,11 @@ img {
 }
 .section_desserts-article--img {
   border-radius: var(--cardRadius);
+  border: 2px solid transparent;
 }
 
 .section_desserts-order--img {
-  border: 2px solid var(--Red);
+  border-color: var(--Red);
 }
 
 .section_desserts-article--btn {
@@ -72,7 +76,6 @@ img {
   justify-content: center;
   align-items: center;
   align-self: center;
-
   transform: translateY(-1rem);
   min-width: max-content;
   padding: 0.7rem 1.7rem;
@@ -87,12 +90,12 @@ img {
 
 .section_desserts-article--quantityBtns {
   display: flex;
+  gap: 3rem;
   background-color: var(--Red);
-  width: 50%;
   transform: translateY(-1rem);
-  padding: .5rem;
+  padding: 0.7rem 1.7rem;
   border-radius: 1.5rem;
-  justify-content: space-around;
+
   align-self: center;
   color: white;
   align-items: center;
@@ -130,6 +133,7 @@ img {
   border-radius: var(--cardRadius);
   padding: 1.5rem;
   margin-top: 1.5rem;
+  height: fit-content;
 }
 
 .section_cart h2 {
@@ -142,7 +146,7 @@ img {
   display: flex;
   flex-flow: column;
   min-width: 100%;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 .section_cart-item--info {
   display: inline-block;
@@ -152,7 +156,7 @@ img {
   font-weight: bold;
   display: block;
   width: 100%;
-  padding: .4rem 0;
+  padding: 0.4rem 0;
   color: var(--rose900);
 }
 .section_cart-item--info span {
@@ -164,7 +168,7 @@ img {
   font-weight: bold;
 }
 .cart-item--price_total {
-    font-weight:600;
+  font-weight: 600;
 }
 
 .cart-item--removeBtn {
@@ -178,10 +182,10 @@ img {
 }
 
 .section_cart-total {
-    margin-top: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .section_cart-total--price {
@@ -203,7 +207,7 @@ img {
 hr {
   margin-top: 1rem;
   border-top: 1px solid var(--rose300);
-  opacity: .3;
+  opacity: 0.3;
 }
 
 .section_cart--carbonNeutralDelivery {
@@ -211,10 +215,10 @@ hr {
   align-items: center;
   justify-content: center;
   background: var(--rose100);
-  padding: .7rem;
-  font-size: .9rem;
+  padding: 0.7rem;
+  font-size: 0.9rem;
   margin: 1rem auto;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   width: 95%;
 }
 .section_cart--carbonNeutralDelivery span {
@@ -222,7 +226,7 @@ hr {
 }
 
 .section_cart--carbonNeutralDelivery img {
-  margin-right: .4rem;
+  margin-right: 0.4rem;
 }
 
 .section_cart--confirmOrderBtn {
@@ -235,5 +239,24 @@ hr {
   margin: auto;
   display: block;
   font-weight: 500;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
+
+@media screen and (min-width: 48rem) {
+  .section_desserts--allDesserts{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media screen and (min-width: 89rem) {
+  .section_desserts--allDesserts{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 70% auto;
+    gap: 2rem;
+    max-width: 100%;
+  }}
