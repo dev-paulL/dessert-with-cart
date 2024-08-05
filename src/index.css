@@ -62,6 +62,10 @@ img {
   border-radius: var(--cardRadius);
 }
 
+.section_desserts-order--img {
+  border: 2px solid var(--Red);
+}
+
 .section_desserts-article--btn {
   display: flex;
   gap: 5px;
@@ -83,12 +87,31 @@ img {
 
 .section_desserts-article--quantityBtns {
   display: flex;
+  background-color: var(--Red);
+  width: 50%;
+  transform: translateY(-1rem);
+  padding: .5rem;
+  border-radius: 1.5rem;
+  justify-content: space-around;
+  align-self: center;
+  color: white;
+  align-items: center;
 }
-/* TODO quantity btns style */
+
+.section_desserts-article--quantityBtns button {
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 9999px;
+  width: 1rem;
+  height: 1rem;
+  padding: 2px;
+}
 
 .section_desserts-article--category {
   color: var(--rose500);
-  
 }
 
 .section_desserts-article--name {
@@ -181,4 +204,36 @@ hr {
   margin-top: 1rem;
   border-top: 1px solid var(--rose300);
   opacity: .3;
+}
+
+.section_cart--carbonNeutralDelivery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--rose100);
+  padding: .7rem;
+  font-size: .9rem;
+  margin: 1rem auto;
+  border-radius: .5rem;
+  width: 95%;
+}
+.section_cart--carbonNeutralDelivery span {
+  font-weight: bold;
+}
+
+.section_cart--carbonNeutralDelivery img {
+  margin-right: .4rem;
+}
+
+.section_cart--confirmOrderBtn {
+  background: var(--Red);
+  color: white;
+  border-radius: 1.5rem;
+  border: none;
+  padding: 1rem;
+  width: 95%;
+  margin: auto;
+  display: block;
+  font-weight: 500;
+  font-size: .9rem;
 }

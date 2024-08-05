@@ -28,7 +28,7 @@ export default function DessertCard({ dessert }) {
       <img
         alt={dessert.name}
         src={dessert.image.mobile}
-        className="section_desserts-article--img"
+        className={`section_desserts-article--img ${quantityInCart > 0 && "section_desserts-order--img"}`}
       />
 
       {quantityInCart === 0 ? (
@@ -54,9 +54,13 @@ export default function DessertCard({ dessert }) {
         </button>
       ) : (
         <div className="section_desserts-article--quantityBtns">
-          <button className="section_desserts-article--decrementBtn" onClick={handleDecrement}>-</button>
+          <button className="section_desserts-article--decrementBtn" onClick={handleDecrement}>
+            <img src="images/icon-decrement-quantity.svg" alt="" />
+          </button>
           <p>{quantityInCart}</p>
-          <button className="section_desserts-article--incrementBtn" onClick={handleIncrement}>+</button>
+          <button className="section_desserts-article--incrementBtn" onClick={handleIncrement}>
+          <img src="images/icon-increment-quantity.svg" alt="" />
+          </button>
         </div>
       )}
 

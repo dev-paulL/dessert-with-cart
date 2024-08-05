@@ -10,9 +10,13 @@ export default function Cart() {
   return (
     <section className="section_cart">
       <h2>Your Cart ({totalItems})</h2>
-      {cart.length === 0 ? (
+      {totalItems === 0 ? (
         <>
-          <img src="/images/illustration-empty-cart.svg" alt="" className="section_cart-empty--illustration" />
+          <img
+            src="/images/illustration-empty-cart.svg"
+            alt=""
+            className="section_cart-empty--illustration"
+          />
           <p className="section_cart-empty--text">Your added items will appear here</p>
         </>
       ) : (
@@ -52,10 +56,18 @@ export default function Cart() {
           </div>
         ))
       )}
-      {cart.length !== 0 && (
-        <div className="section_cart-total">
-          <p>Order Total</p> <h3 className="section_cart-total--price">${totalPrice}</h3>
-        </div>
+      {totalItems !== 0 && (
+        <>
+          <div className="section_cart-total">
+            <p>Order Total</p> <h3 className="section_cart-total--price">${totalPrice}</h3>
+          </div>
+          <div className="section_cart--carbonNeutralDelivery">
+            <img src="/images/icon-carbon-neutral.svg" alt=""/>
+            <p>This is a <span>carbon neutral</span> delivery</p>
+          </div>
+
+          <button className="section_cart--confirmOrderBtn">Confirm Order</button>
+        </>
       )}
     </section>
   );
