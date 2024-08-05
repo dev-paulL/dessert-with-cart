@@ -37,6 +37,7 @@ body {
   flex-flow: column;
   justify-items: center;
   align-items: center;
+  position: relative;
 }
 
 main {
@@ -130,7 +131,7 @@ img {
   justify-content: center;
   align-items: center;
   border: 1px solid white;
-  border-radius: 9999px;
+  border-radius: 50%;
   width: 1rem;
   height: 1rem;
   padding: 2px;
@@ -142,10 +143,6 @@ img {
 .section_desserts-article--quantityBtns button:hover svg path {
   fill: var(--Red);
 }
-
-/* .section_desserts-article--quantityBtns button svg path {
-  fill: white;
-} */
 
 .section_desserts-article--category {
   color: var(--rose500);
@@ -286,23 +283,25 @@ hr {
 
 .section_modal {
   position: fixed;
+  left: 50%;
   bottom: 0;
-  left: 0;
-  right: 0;
-
   border-radius: 1rem 1rem 0 0;
   width: 100%;
   background: white;
-  /*  min-height: 80vh; */
-  padding: 2rem 1.5rem;
+  height: max-content;
+  max-height: 90%;
+  overflow: scroll;
+  padding: 2rem;
   z-index: 2;
-  max-width: 50rem;
+  max-width: 40rem;
+  transform: translate(-50%);
 }
 
 .section_modal h2 {
   font-size: 2.2rem;
   margin-top: 0.7rem;
   color: var(--rose900);
+  width: min-content;
 }
 
 .section_modal--text {
@@ -405,13 +404,14 @@ hr {
   }
 
   .section_modal {
-    width: 80%;
     border-radius: 1rem;
-    position: fixed;
-    /*  bottom: 0; */
-    transform: translateY(-20%);
-    margin: auto;
-    min-height: min-content;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 80%;
+  }
+
+  .section_modal h2 {
+    width: max-content;
   }
 }
 
@@ -427,7 +427,4 @@ hr {
     max-width: 90rem;
   }
 
-  .section_modal {
-    transform: translateY(-50%);
-  }
 }
