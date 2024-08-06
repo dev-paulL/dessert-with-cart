@@ -8,7 +8,7 @@ export default function OrderConfirmedModal({ totalPrice }) {
     <section className="section_modal">
       <img src="/images/icon-order-confirmed.svg" alt="" />
       <h2>
-        Order <br /> Confirmed
+        Order Confirmed
       </h2>
       <p className="section_modal--text">We hope you enjoy your food!</p>
 
@@ -41,7 +41,7 @@ export default function OrderConfirmedModal({ totalPrice }) {
           <p className="section_modal--orderedArticlesList--orderTotal-price">${totalPrice}</p>
         </div>
       </ul>
-      <a href="/index.html" className="section_modal--link-newOrder">
+      <a href="/" className="section_modal--link-newOrder">
         Start New Order
       </a>
     </section>

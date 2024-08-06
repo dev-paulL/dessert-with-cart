@@ -1,5 +1,4 @@
 import "./index.css";
-
 import DessertsCategory from "./components/DessertsCategory";
 import { CartProvider } from "./context/CartContext";
 import Cart from "./components/Cart";

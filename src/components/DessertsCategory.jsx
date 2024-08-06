@@ -1,6 +1,6 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-import DessertCard from "./DessertCard";
+import DessertCard from "./desserts/DessertCard";
 
 export default function DessertsCategory() {
   const [desserts, setDesserts] = useState([]);

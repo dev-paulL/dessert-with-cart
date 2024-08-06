@@ -37,15 +37,13 @@ export const CartProvider = ({ children }) => {
     return order ? order.quantity : 0;
   };
 
-  const contextValue = {
-    cart,
-    addDessertToCart,
-    updateDessertInCart,
-    removeFromCart,
-    getOrderQuantity,
-  };
-
-  return <CartContext.Provider value={contextValue}>{children}</CartContext.Provider>;
+  return (
+    <CartContext.Provider
+      value={{cart, addDessertToCart, updateDessertInCart, removeFromCart, getOrderQuantity}}
+    >
+      {children}
+    </CartContext.Provider>
+  );
 };
 
 export default CartContext;
