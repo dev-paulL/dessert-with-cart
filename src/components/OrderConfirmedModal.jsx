@@ -6,7 +6,7 @@ export default function OrderConfirmedModal({ totalPrice }) {
 
   return (
     <section className="section_modal">
-      <img src="/images/icon-order-confirmed.svg" alt="" />
+      <img src="/dessert-with-cart/images/icon-order-confirmed.svg" alt="" />
       <h2>
         Order Confirmed
       </h2>
@@ -16,7 +16,7 @@ export default function OrderConfirmedModal({ totalPrice }) {
         {cart.map((orderedItem) => (
           <div key={orderedItem.name}>
             <li className="section_modal--orderedArticlesList--article">
-              <img src={orderedItem.image.thumbnail} alt={orderedItem.name}></img>
+              <img src={`/dessert-with-cart` + orderedItem.image.thumbnail} alt={orderedItem.name} />
               <h3 className="section_modal--orderedArticlesList--article-name">
                 {orderedItem.name}
               </h3>
@@ -41,7 +41,7 @@ export default function OrderConfirmedModal({ totalPrice }) {
           <p className="section_modal--orderedArticlesList--orderTotal-price">${totalPrice}</p>
         </div>
       </ul>
-      <a href="/" className="section_modal--link-newOrder">
+      <a href="/dessert-with-cart/" className="section_modal--link-newOrder">
         Start New Order
       </a>
     </section>
