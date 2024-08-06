@@ -4,7 +4,7 @@ export default function EmptyCartInfo() {
   return (
     <>
       <img
-        src="/images/illustration-empty-cart.svg"
+        src="/dessert-with-cart/images/illustration-empty-cart.svg"
         alt=""
         className="section_cart-empty--illustration"
       />

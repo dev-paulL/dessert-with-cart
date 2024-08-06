@@ -6,7 +6,7 @@ export default function DessertsCategory() {
   const [desserts, setDesserts] = useState([]);
 
   useEffect(() => {
-    fetch("/data.json")
+    fetch("/dessert-with-cart/data.json")
       .then((r) => r.json())
       .then((d) => setDesserts(d));
   }, []);

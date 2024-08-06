@@ -26,7 +26,7 @@ a {
 
 .btn:focus,
 a:focus {
-  outline: 2px solid color('Red');
+  outline: 2px solid color("Red");
   outline-offset: 2px;
 }
 
@@ -100,6 +100,7 @@ img {
   border-radius: var(--cardRadius);
   border: 2px solid transparent;
   max-width: 100%;
+  /*  width: 40rem; */
 }
 
 .section_desserts-selected {
@@ -445,6 +446,9 @@ footer a {
   .section_modal h2 {
     width: max-content;
   }
+  /*  .section_desserts-article--img {
+   width: 30rem; 
+  } */
 }
 
 /* Large screen */
@@ -458,6 +462,9 @@ footer a {
     gap: 2rem;
     max-width: 90rem;
   }
+  /*  .section_desserts-article--img {
+    width: 20rem; 
+  } */
 }
 
 /* Animations */

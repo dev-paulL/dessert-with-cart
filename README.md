@@ -1,8 +1,52 @@
-# React + Vite
+# Frontend Mentor - Product list with cart solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the [Product list with cart challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-Currently, two official plugins are available:
+### The challenge
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<details>
+
+<summary>Users should be able to:</summary>
+
+- Add items to the cart and remove them
+- Increase/decrease the number of items in the cart
+- See an order confirmation modal when they click "Confirm Order"
+- Reset their selections when they click "Start New Order"
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
+
+</details>
+
+### Screenshot
+
+### Links
+
+- Solution URL: [SOON]()
+- Live Site URL: [SOON]()
+
+## My process
+
+I wanted to learn how to build a shopping page with a cart, so I chose this challenge as my second React project.
+
+- 📸 Analyzed screenshots to organize the page and its components.
+- 📱 Focused on the simpler mobile design first 
+- 🛒 Implemented cart functionality (adding, removing, changing item quantities) step by step to ensure thorough understanding.
+- 🎨 Imported font and colors, then designed the components
+- 🖥️ Adapted the layout for tablet and desktop :
+  - Mobile: One dessert per row, cart at the end of the page.
+  - Tablet: Two desserts per row, cart on the right.
+  - Desktop: Three desserts per row, cart on the right.
+- ✅ Added the confirmation modal and styled it for all device sizes.
+- 🌀 Implemented animations for link and button hovers, adding items to the cart, and modal.
+- 🌐 Started adding ARIA rules. I am currently learning about screen readers and how to ensure a good experience for all users.
+
+### Built with
+
+- **React**
+- Vite
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox & Grid
+- Mobile-first workflow
+
+# Any feedback welcome 👍
