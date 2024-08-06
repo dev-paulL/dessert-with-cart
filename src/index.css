@@ -32,6 +32,7 @@ body {
 
 body {
   font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
   background-color: var(--rose100);
   display: flex;
   flex-flow: column;
@@ -41,7 +42,7 @@ body {
 }
 
 main {
-  min-height: 100vh;
+  min-height: 98vh;
   display: grid;
   padding: 1rem;
 }
@@ -74,9 +75,10 @@ img {
   gap: 1rem;
 }
 .section_desserts h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
   padding-bottom: 1rem;
+  color: var(--rose900);
 }
 
 .section_desserts-article {
@@ -84,9 +86,14 @@ img {
   flex-flow: column;
   line-height: 1.7;
 }
+.section_desserts-article picture {
+  width: 100%;
+}
+
 .section_desserts-article--img {
   border-radius: var(--cardRadius);
   border: 2px solid transparent;
+  max-width: 100%;
 }
 
 .section_desserts-order--img {
@@ -103,11 +110,11 @@ img {
   min-width: max-content;
   padding: 0.7rem 1rem;
   width: 50%;
-  background: white;
+  background: var(--rose50);
   border: 1px solid var(--rose500);
   border-radius: 1.5rem;
 
-  font-weight: bold;
+  font-weight: 600;
   color: var(--rose900);
 }
 .section_desserts-article--btn-addToCart:hover {
@@ -121,8 +128,9 @@ img {
   padding: 0.7rem 1.7rem;
   border-radius: 1.5rem;
   align-self: center;
-  color: white;
+  color: var(--rose50);
   align-items: center;
+  font-weight: 600;
 }
 
 .section_desserts-article--quantityBtns button {
@@ -130,15 +138,16 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid white;
+  border: 1px solid var(--rose50);
   border-radius: 50%;
   width: 1rem;
   height: 1rem;
   padding: 2px;
+  
 }
 
 .section_desserts-article--quantityBtns button:hover {
-  background-color: white;
+  background-color: var(--rose50);
 }
 .section_desserts-article--quantityBtns button:hover svg path {
   fill: var(--Red);
@@ -151,16 +160,17 @@ img {
 .section_desserts-article--name {
   font-size: 1.1rem;
   color: var(--rose900);
+  font-weight: 600;
 }
 
 .section_desserts-article--price {
   color: var(--Red);
-  font-weight: bold;
+  font-weight: 600;
 }
 
 /* Cart */
 .section_cart {
-  background-color: white;
+  background-color: var(--rose50);
   border-radius: var(--cardRadius);
   padding: 1.5rem;
   margin-top: 1.5rem;
@@ -169,7 +179,7 @@ img {
 
 .section_cart h2 {
   color: var(--Red);
-  font-weight: bold;
+  font-weight: 700;
   padding-bottom: 1rem;
 }
 
@@ -184,7 +194,7 @@ img {
   color: var(--rose500);
 }
 .cart-item--name {
-  font-weight: bold;
+  font-weight: 600;
   display: block;
   width: 100%;
   padding: 0.4rem 0;
@@ -196,7 +206,7 @@ img {
 }
 .cart-item--quantity {
   color: var(--Red);
-  font-weight: bold;
+  font-weight: 700;
 }
 .cart-item--price_total {
   font-weight: 600;
@@ -232,6 +242,7 @@ img {
 .section_cart-empty--illustration {
   margin: 1rem auto;
   display: block;
+  max-width: 10rem;
 }
 
 .section_cart-empty--text {
@@ -258,7 +269,7 @@ hr {
   text-align: center;
 }
 .section_cart--carbonNeutralDelivery span {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .section_cart--carbonNeutralDelivery img {
@@ -267,14 +278,15 @@ hr {
 
 .section_cart--confirmOrderBtn {
   background: var(--Red);
-  color: white;
+  color: var(--rose50);
   border-radius: 1.5rem;
   border: none;
   padding: 1rem;
   width: 95%;
   margin: auto;
   display: block;
-  font-size: 0.9rem;
+  font-weight: 600;
+  font-size: .85rem;
 }
 
 .section_cart--confirmOrderBtn:hover {
@@ -287,7 +299,7 @@ hr {
   bottom: 0;
   border-radius: 1rem 1rem 0 0;
   width: 100%;
-  background: white;
+  background: var(--rose50);
   height: max-content;
   max-height: 90%;
   overflow: scroll;
@@ -339,6 +351,7 @@ hr {
   white-space: nowrap;
   overflow: hidden;
   font-size: 1rem;
+  font-weight: 600;
 }
 
 .section_modal ul li span {
@@ -353,7 +366,7 @@ hr {
 
 .section_modal--orderedArticlesList--article-quantity {
   color: var(--Red);
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .section_modal--orderedArticlesList--article-priceEach {
@@ -383,7 +396,7 @@ hr {
 
 .section_modal--link-newOrder {
   text-decoration: none;
-  color: white;
+  color: var(--rose50);
   background: var(--Red);
   padding: 1rem;
   width: 100%;
@@ -397,6 +410,16 @@ hr {
   background: hsl(14, 86%, 31%);
 }
 
+footer {
+  color: var(--rose900);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+footer a {
+  color: var(--Red);
+}
 /* Medium screen */
 @media screen and (min-width: 48rem) {
   .section_desserts--allDesserts {
@@ -426,5 +449,4 @@ hr {
     gap: 2rem;
     max-width: 90rem;
   }
-
 }
