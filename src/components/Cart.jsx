@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
 import CartContext from "../context/CartContext";
 import OrderConfirmedModal from "./OrderConfirmedModal";
-import EmptyCartInfo from "./EmptyCartInfo";
-import CartItem from "./CartItem";
-import CarbonNeutral from "./CarbonNeutral";
+import EmptyCartInfo from "./cart/ui/EmptyCartInfo";
+import CartItem from "./cart/CartItem";
+import CarbonNeutral from "./cart/ui/CarbonNeutral";
 
 export default function Cart() {
   const { cart } = useContext(CartContext);
@@ -23,16 +23,24 @@ export default function Cart() {
     <>
       <section className="section_cart">
         <h2>Your Cart ({totalItems})</h2>
-        {totalItems === 0 ? <EmptyCartInfo /> : cart.map((cartItem) => <CartItem key={cartItem.name} cartItem={cartItem}/>)}
+        {totalItems === 0 ? (
+          <EmptyCartInfo />
+        ) : (
+          cart.map((cartItem) => <CartItem key={cartItem.name} cartItem={cartItem} />)
+        )}
         {totalItems !== 0 && (
           <>
             <div className="section_cart-total">
               <p>Order Total</p> <h3 className="section_cart-total--price">${totalPrice}</h3>
             </div>
-            
+
             <CarbonNeutral />
 
-            <button onClick={handleConfirmOrder} className="section_cart--confirmOrderBtn">
+            <button
+              onClick={handleConfirmOrder}
+              className="section_cart--confirmOrderBtn"
+              aria-label="Confirm Order"
+            >
               Confirm Order
             </button>
           </>

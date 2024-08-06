@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import CartContext from "../context/CartContext";
+import CartContext from "../../context/CartContext";
 import DessertCardPicture from "./DessertCardPicture";
 import ButtonAddToCart from "./ButtonAddToCart";
 import ButtonManageQuantity from "./ButtonManageQuantity";
@@ -31,12 +31,13 @@ export default function DessertCard({ dessert }) {
       <DessertCardPicture dessert={dessert} quantityInCart={quantityInCart} />
 
       {quantityInCart === 0 ? (
-        <ButtonAddToCart onClick={handleAdd} />
+        <ButtonAddToCart onClick={handleAdd} ariaLabel={`Add ${dessert.name} to cart`} />
       ) : (
         <ButtonManageQuantity
           onClickDecrement={handleDecrement}
           onClickIncrement={handleIncrement}
           quantityInCart={quantityInCart}
+          dessertName={dessert.name}
         />
       )}
 

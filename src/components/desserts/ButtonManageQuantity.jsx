@@ -1,9 +1,22 @@
 import React from "react";
 
-export default function ButtonManageQuantity({onClickDecrement, onClickIncrement, quantityInCart}) {
+export default function ButtonManageQuantity({
+  onClickDecrement,
+  onClickIncrement,
+  quantityInCart,
+  dessertName,
+}) {
   return (
-    <div className="section_desserts-article--quantityBtns">
-      <button className="section_desserts-article--decrementBtn" onClick={onClickDecrement}>
+    <div
+      className="section_desserts-article--quantityBtns"
+      role="group"
+      aria-label={`Adjust quantity for ${dessertName}`}
+    >
+      <button
+        className="section_desserts-article--decrementBtn"
+        onClick={onClickDecrement}
+        aria-label={`Decrease quantity of ${dessertName}`}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="10"
@@ -15,7 +28,11 @@ export default function ButtonManageQuantity({onClickDecrement, onClickIncrement
         </svg>
       </button>
       <p>{quantityInCart}</p>
-      <button className="section_desserts-article--incrementBtn" onClick={onClickIncrement}>
+      <button
+        className="section_desserts-article--incrementBtn"
+        onClick={onClickIncrement}
+        aria-label={`Decrease quantity of ${dessertName}`}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="10"

@@ -10,7 +10,7 @@ export default function DessertCardPicture({ dessert, quantityInCart }) {
         alt={dessert.name}
         src={dessert.image.mobile}
         className={`section_desserts-article--img ${
-          quantityInCart > 0 ? "section_desserts-order--img" : ""
+          quantityInCart > 0 ? "section_desserts-selected" : ""
         }`}
       />
     </picture>

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import CartContext from "../context/CartContext";
+import CartContext from "../../context/CartContext";
 
 export default function CartItem({ cartItem }) {
   const { removeFromCart } = useContext(CartContext);
@@ -8,7 +8,11 @@ export default function CartItem({ cartItem }) {
     <div className="section_cart-item">
       <div className="section_cart-item--info">
         <p className="cart-item--name">{cartItem.name}</p>
-        <button className="cart-item--removeBtn" onClick={() => removeFromCart(cartItem.name)}>
+        <button
+          className="cart-item--removeBtn"
+          onClick={() => removeFromCart(cartItem.name)}
+          aria-label={`Remove ${cartItem.name} from the cart.`}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="100%"
