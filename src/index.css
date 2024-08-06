@@ -26,7 +26,7 @@ a {
 
 .btn:focus,
 a:focus {
-  outline: 2px solid color("Red");
+  outline: 2px solid var(--Red);
   outline-offset: 2px;
 }
 
@@ -39,12 +39,13 @@ body {
 body {
   font-family: "Red Hat Text", sans-serif;
   font-optical-sizing: auto;
-  background-color: var(--rose100);
+  background-color: var(--rose50);
   display: flex;
   flex-flow: column;
   justify-items: center;
   align-items: center;
   position: relative;
+  padding: 1rem;
 }
 
 main {
@@ -117,7 +118,7 @@ img {
   min-width: max-content;
   padding: 0.7rem 1rem;
   width: 50%;
-  background: var(--rose50);
+  background: /* var(--rose50) */ white;
   border: 1px solid var(--rose500);
   border-radius: 1.5rem;
 
@@ -135,7 +136,7 @@ img {
   padding: 0.7rem 1.7rem;
   border-radius: 1.5rem;
   align-self: center;
-  color: var(--rose50);
+  color: /* var(--rose50) */ white;
   align-items: center;
   font-weight: 600;
 }
@@ -177,7 +178,7 @@ img {
 
 /* Cart */
 .section_cart {
-  background-color: var(--rose50);
+  background-color: /* var(--rose50) */ white;
   border-radius: var(--cardRadius);
   padding: 1.5rem;
   margin-top: 1.5rem;
@@ -460,7 +461,7 @@ footer a {
   main {
     grid-template-columns: 70% auto;
     gap: 2rem;
-    max-width: 90rem;
+    max-width: 80rem;
   }
   /*  .section_desserts-article--img {
     width: 20rem; 

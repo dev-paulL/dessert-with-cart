@@ -19,10 +19,39 @@ This is a solution to the [Product list with cart challenge on Frontend Mentor](
 
 ### Screenshot
 
+<details>
+<summary>Mobile</summary>
+
+![Mobile design](./mobile_screenshot.png)
+
+</details>
+
+<details>
+<summary>Mobile Modal</summary>
+
+![Mobile design](./mobile-modal_screenshot.png)
+
+</details>
+
+<details>
+<summary>Desktop</summary>
+
+![Desktop design](./desktop_screenshot.png)
+
+</details>
+
+
+<details>
+<summary>Desktop modal</summary>
+
+![Desktop design](./desktop-modal_screenshot.png)
+
+</details>
+
 ### Links
 
-- Solution URL: [SOON]()
-- Live Site URL: [SOON]()
+- Solution URL: [https://www.frontendmentor.io/solutions/desserts-with-cart-react-efJswMtcRO](https://www.frontendmentor.io/solutions/desserts-with-cart-react-efJswMtcRO)
+- Live Site URL: [https://dev-paull.github.io/dessert-with-cart/](https://dev-paull.github.io/dessert-with-cart/)
 
 ## My process
 
